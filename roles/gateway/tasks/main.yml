@@ -1,0 +1,30 @@
+---
+- name: Install packages
+  include: 10_packages.yml
+
+- name: Compile batman-adv
+  include: 20_batman-adv.yml
+
+- name: Fixup locales
+  include: 30_locale.yml
+
+- name: Generate Ffs Configs
+  include: 40_configGenerator.yml
+
+- name: Setup fastd instances
+  include: 50_fastd.yml
+
+- name: Setup routing and network
+  include: 60_network.yml
+
+- name: Setup sysctls
+  include: 70_kernel_params.yml
+
+- name: Install services
+  include: 80_services.yml
+
+- name: Setup tinc
+  include: 90_tinc.yml
+
+- name: Setup backbone
+  include: 95_backbone.yml

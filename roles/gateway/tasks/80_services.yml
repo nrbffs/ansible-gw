@@ -1,0 +1,3 @@
+---
+- service: name=bird enabled=yes
+- service: name=bird6 enabled=yes
